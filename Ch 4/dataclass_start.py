@@ -1,13 +1,18 @@
 # Python Object Oriented Programming by Joe Marini course example
 # Using data classes to represent data objects
 
+from dataclasses import dataclass
 
+
+@dataclass
 class Book:
-    def __init__(self, title, author, pages, price):
-        self.title = title
-        self.author = author
-        self.pages = pages
-        self.price = price
+    title: str
+    author: str
+    pages: int
+    price: float
+
+    def getbookinfo(self):
+        return f"{self.title} by {self.author}"
 
 
 # create some instances
@@ -19,9 +24,10 @@ print(b1.title)
 print(b2.author)
 
 # TODO: print the book itself - dataclasses implement __repr__
-
+print(b1)
 
 # TODO: comparing two dataclasses - they implement __eq__
-
+print(b1 == b2)
 
 # TODO: change some fields
+print(b1.getbookinfo())
