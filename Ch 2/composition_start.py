@@ -16,6 +16,9 @@ class Book:
         self.chapters.append((name, pages))
 
 
+class Author:
+
+
 b1 = Book("War and Peace", 39.0, "Leo", "Tolstoy")
 
 b1.addchapter("Chapter 1", 125)
